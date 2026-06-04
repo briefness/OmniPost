@@ -1,0 +1,44 @@
+{
+  "name": "playwright-publisher",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "多平台自动化内容发布 + GEO 可见性监控系统 - 基于 Playwright",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "serve": "tsx src/server.ts",
+    "login": "tsx src/login.ts",
+    "login:csdn": "tsx src/login.ts --platform csdn",
+    "login:zhihu": "tsx src/login.ts --platform zhihu",
+    "login:deepseek": "tsx src/login.ts --platform deepseek",
+    "login:kimi": "tsx src/login.ts --platform kimi",
+    "login:yuanbao": "tsx src/login.ts --platform yuanbao",
+    "login:metaso": "tsx src/login.ts --platform metaso",
+    "login:all": "tsx src/login.ts --platform all",
+    "monitor": "tsx src/monitor-cli.ts",
+    "debug": "tsx src/index.ts --debug",
+    "debug:csdn": "tsx src/index.ts --debug --platform csdn",
+    "debug:zhihu": "tsx src/index.ts --debug --platform zhihu",
+    "diagnose": "tsx src/diagnose.ts",
+    "publish:csdn": "tsx src/index.ts --platform csdn",
+    "publish:zhihu": "tsx src/index.ts --platform zhihu",
+    "publish:all": "tsx src/index.ts --platform all",
+    "trace:view": "npx playwright show-trace"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0",
+    "gray-matter": "^4.0.3",
+    "playwright-extra": "^4.3.0",
+    "puppeteer-extra-plugin-stealth": "^2.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "tsx": "^4.16.0",
+    "@types/node": "^20.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

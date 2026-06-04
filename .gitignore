@@ -1,0 +1,5 @@
+node_modules
+dist
+storage/auth/*.json
+*.zip
+.DS_Store
