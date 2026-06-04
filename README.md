@@ -35,8 +35,6 @@ autoPublish/
 ├── package.json
 ├── tsconfig.json
 ├── posts/                       # 待发布的 Markdown 文章
-│   └── hello-world/
-│       └── index.md
 ├── src/
 │   ├── index.ts                 # CLI 主入口：文章发布
 │   ├── server.ts                # HTTP API 服务（发布 + 监控）

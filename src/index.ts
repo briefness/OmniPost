@@ -21,7 +21,11 @@ async function main() {
 
   // 解析命令行参数
   const args = process.argv.slice(2);
-  const fileArg = getArg(args, '--file') || 'posts/hello-world/index.md';
+  const fileArg = getArg(args, '--file');
+  if (!fileArg) {
+    console.error('❌ 请指定要发布的文件: --file <path>');
+    process.exit(1);
+  }
   const platformArg = getArg(args, '--platform') || 'all';
   const isDryRun = args.includes('--dry-run');
   const isDebug = args.includes('--debug');
